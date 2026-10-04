@@ -10,7 +10,7 @@
 USE DATABASE AW_PIPELINE;
 USE SCHEMA RAW;
 
-CREATE OR REPLACE TABLE RAW.RAW_CUSTOMER (
+CREATE OR ALTER TABLE RAW.RAW_CUSTOMER (
 	CustomerID VARCHAR,
 	PersonID VARCHAR,
 	StoreID VARCHAR,
@@ -24,7 +24,7 @@ CREATE OR REPLACE TABLE RAW.RAW_CUSTOMER (
 --PERSON
 -----------------------------------------------------------
 
-CREATE OR REPLACE TABLE RAW.PERSON (
+CREATE OR ALTER TABLE RAW.PERSON (
 	BusinessEntityID VARCHAR,
 	PersonType VARCHAR,
 	NameStyle VARCHAR,
@@ -44,7 +44,7 @@ CREATE OR REPLACE TABLE RAW.PERSON (
 --STORE
 -----------------------------------------------------------
 
-CREATE OR REPLACE TABLE RAW.Store (
+CREATE OR ALTER TABLE RAW.Store (
 	BusinessEntityID VARCHAR,
 	Name VARCHAR,
 	SalesPersonID VARCHAR,
@@ -57,7 +57,7 @@ CREATE OR REPLACE TABLE RAW.Store (
 --SALESTERRITORY
 -----------------------------------------------------------
 
-CREATE OR REPLACE TABLE RAW.SalesTerritory (
+CREATE OR ALTER TABLE RAW.SalesTerritory (
 	TerritoryID VARCHAR,
 	Name VARCHAR,
 	CountryRegionCode VARCHAR,
@@ -74,7 +74,7 @@ CREATE OR REPLACE TABLE RAW.SalesTerritory (
 --PRODUCT
 -----------------------------------------------------------
 
-CREATE OR REPLACE TABLE RAW.PRODUCT (
+CREATE OR ALTER TABLE RAW.PRODUCT (
 	ProductID VARCHAR(100),
 	Name VARCHAR(100),
 	ProductNumber VARCHAR(100),
@@ -106,7 +106,7 @@ CREATE OR REPLACE TABLE RAW.PRODUCT (
 --SUBCATEGORY
 -----------------------------------------------------------
 
-CREATE OR REPLACE TABLE RAW.PRODUCTSUBCATEGORY (
+CREATE OR ALTER TABLE RAW.PRODUCTSUBCATEGORY (
 	ProductSubcategoryID VARCHAR(100),
 	ProductCategoryID VARCHAR(100),
 	Name VARCHAR(100),
@@ -118,7 +118,7 @@ CREATE OR REPLACE TABLE RAW.PRODUCTSUBCATEGORY (
 --CATEGORY
 -----------------------------------------------------------
 
-CREATE OR REPLACE TABLE RAW.PRODUCTCATEGORY(
+CREATE OR ALTER TABLE RAW.PRODUCTCATEGORY(
 	ProductCategoryID VARCHAR(100),
 	Name VARCHAR(100),
 	rowguid VARCHAR(100),
@@ -129,7 +129,7 @@ CREATE OR REPLACE TABLE RAW.PRODUCTCATEGORY(
 --SALESORDERHEADER
 -----------------------------------------------------------
 
-CREATE OR REPLACE TABLE RAW.SALESORDERHEADER (
+CREATE OR ALTER TABLE RAW.SALESORDERHEADER (
 	SalesOrderID VARCHAR(100),
 	RevisionNumber VARCHAR(100),
 	OrderDate VARCHAR(100),
@@ -162,7 +162,7 @@ CREATE OR REPLACE TABLE RAW.SALESORDERHEADER (
 --SALESORDERDETAIL
 -----------------------------------------------------------
 
-CREATE OR REPLACE TABLE RAW.SalesOrderDetail (
+CREATE OR ALTER TABLE RAW.SalesOrderDetail (
 	SalesOrderID VARCHAR(100),
 	SalesOrderDetailID VARCHAR(100),
 	CarrierTrackingNumber VARCHAR(100),
