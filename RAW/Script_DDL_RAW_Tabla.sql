@@ -1,7 +1,8 @@
 -----------------------------------------------------------
 --RAW
 --CREACION Y CARGA
---Esta es script DDl de las tablas de capa RAW
+--Esta es script DDL de las tablas de capa RAW.
+--La fuente es de una base de datos de sql server.
 -----------------------------------------------------------
 
 -----------------------------------------------------------
