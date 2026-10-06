@@ -25,7 +25,7 @@ jobs:
       - run: pip install snowflake-cli
 
       - name: Fetch del repo en Snowflake
-        run: snow git fetch aw_pipeline.orchestration.data_engineering_snowflake
+        run: snow git fetch $REPO
 
       - name: Ejecutar scripts de la rama ${{ github.ref_name }}
         run: snow git execute "@$REPO/branches/${{ github.ref_name }}/$SQL_PATH/*.sql"
