@@ -18,9 +18,8 @@ jobs:
       SNOWFLAKE_CONNECTIONS_DATA_ENGINEERING_SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
       SNOWFLAKE_CONNECTIONS_DATA_ENGINEERING_SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
     steps:
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Install SnowflakeCLI
         uses: snowflakedb/snowflake-cli-action@v1.5
