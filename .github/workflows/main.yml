@@ -22,7 +22,11 @@ jobs:
         with:
           python-version: "3.11"
 
-      - run: pip install snowflake-cli
+      - name: Install SnowflakeCLI
+        uses: snowflakedb/snowflake-cli-action@v1.5
+        with:
+          cli-version: "latest"
+          default-config-file-path: "config.toml"
 
       - name: Fetch del repo en Snowflake
         run: snow git fetch $REPO
