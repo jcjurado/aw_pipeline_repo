@@ -26,6 +26,12 @@ jobs:
         with:
           cli-version: "latest"
           default-config-file-path: "config.toml"
+      - name: Verificar configuración Snowflake CLI
+          run: |
+            pwd
+            ls -la
+            cat config.toml
+            snow connection list
 
       - name: Fetch del repo en Snowflake
         run: snow git fetch $REPO --connection data_engineering_snowflake
