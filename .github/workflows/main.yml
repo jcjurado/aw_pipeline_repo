@@ -28,7 +28,7 @@ jobs:
           default-config-file-path: "config.toml"
 
       - name: Fetch del repo en Snowflake
-        run: snow git fetch $REPO
+        run: snow git fetch $REPO --connection data_engineering_snowflake
 
       - name: Ejecutar scripts de la rama ${{ github.ref_name }}
-        run: snow git execute "@$REPO/branches/${{ github.ref_name }}/$SQL_PATH/*.sql"
+        run: snow git execute "@$REPO/branches/${{ github.ref_name }}/$SQL_PATH/*.sql" --connection data_engineering_snowflake
