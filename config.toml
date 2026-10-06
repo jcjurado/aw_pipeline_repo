@@ -4,6 +4,6 @@ default_connection_name = "data_engineering_snowflake"
 
 [connections]
 [connections.data_engineering_snowflake]
-account=""
-user=""
-password=""
+account="${SNOWFLAKE_ACCOUNT}"
+user="${SNOWFLAKE_USER}"
+password="${SNOWFLAKE_PASSWORD}"
